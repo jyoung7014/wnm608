@@ -32,6 +32,7 @@ body {
 	font-family:var(--font-sans)
 }
 
+
 h1,
 h2,
 h3,
@@ -57,9 +58,14 @@ a:hover {
 	max-width:1000px;
 	margin-right: auto;
 	margin-left: auto;
+	justify-content: center;
+	align-items: center;
+
 }
 
-
+h2 {
+	text-align: ;
+}
 
 .display-flex { display:flex; }
 .display-inline-flex { display:inline-flex; }
@@ -73,6 +79,8 @@ a:hover {
 .flex-justify-center { justify-content:center; }
 
 .flex-column { flex-direction:column; }
+.flex-wrap { flex-wrap;wrap }
+
 
 
 
@@ -183,6 +191,7 @@ a:hover {
 	background-color: var(--color-main-dark);
 	color: var(--color-white);
 	line-height: var(--header-height);
+	margin-bottom:1em;
 }
 
 	.navbar h1{
@@ -190,7 +199,12 @@ a:hover {
 		margin:0;
 		font-family: var(--font-sans) ;
 	}
-
+	.navbar a{
+		padding: 0 0.5em;
+	}
+	.flush>.navbar {
+		margin-bottom:0;
+	}
 
 
 /* CARD */
@@ -207,6 +221,7 @@ a:hover {
 	.card.soft {
 		border-radius: 0.5em;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		
 	}
 	.card.hard {
 		border-radius: 0.2em;
@@ -231,7 +246,10 @@ a:hover {
 	padding: 1em;
 	}
 
-	
+	[class*='col-']>. card{
+		height: 100%;
+		margin:0;
+	}
 
 	.view-window {
 		height: 50vh;
@@ -289,7 +307,8 @@ a:hover {
 .hotdog,
 .form-button,
 .form-input,
-.form-item {
+.form-item,
+.form-inputs{
 	display: inline-block;
 	background-color: transparent;
 	border-width: 0;
@@ -300,7 +319,8 @@ a:hover {
 	outline: 0;
 }
 
-.form-input {
+.form-input,
+.form-inputs {
 	border-bottom: 1px solid var(--color-neutral-light);
 	padding: 0.5em 1em;
 }
@@ -312,14 +332,14 @@ a:hover {
 
 .form-label {
 	font-size: 0.8em;
-	color: var(--color-neutral-medium);
+	color: var(--color-main-medium);
 	display: inlineblock;
 	width: 100%;
 
 }
 
 .form-button {
-	background-color: var(--color-neutral-light);
+	background-color: #456cf0;
 	padding: 0.5em 0;
 	border-radius: 2em;
 	cursor: pointer;
@@ -373,9 +393,9 @@ a:hover {
 .hotdog {
 	background-color: var(--color-neutral-light);
 	border-radius: 1em;
-	padding: 0.5em 1.5em;
+	padding: 0.5em;
 	display: flex;
-	max-width: 900px;
+	max-width: 338px;
 	margin-left: auto;
 	margin-right: auto
 }
@@ -438,7 +458,7 @@ a:hover {
 
 .images-main img {
     width: 100%;
-    height: 30vh;
+    height: 46vh;
     object-fit: contain;
 }
 
@@ -450,8 +470,9 @@ a:hover {
 
 
 
-
-
+.images-thumbs{
+	padding: 0 0.5em;
+}
 
 
 

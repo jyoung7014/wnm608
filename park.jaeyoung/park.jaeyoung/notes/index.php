@@ -56,8 +56,8 @@
 	
 	<?php
 
-	$firstname = "JaeYoung"
-	$lastname = "Park"
+	$firstname = "JaeYoung";
+	$lastname = "Park";
 	$fullname = "$firstname $lastname";
 
 	echo $fullname;
@@ -68,7 +68,7 @@
 
 	//superglobal
 	// ?name=Joey
-	echo "<a href='?name=Joey'>visit</a><br>"
+	echo "<a href='?name=Joey'>visit</a><br>";
 	echo "<div>My name is {$_GET['name']}</div>";
 
 	// ?name=Joey&type=textarea

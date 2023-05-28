@@ -8,7 +8,7 @@ include_once "parts/templates.php";
 	<title>RVtoME</title>
 	<?php include "parts/meta.php";?>
 </head>
-<body>
+<body class="flush">
 
 	<?php include "parts/navbar.php"; ?>
 
@@ -24,15 +24,32 @@ include_once "parts/templates.php";
 	</div>
 	</div>
 
-	<!-- product -->
-	<?php include "parts/products.php"; ?>
+	<div class="container">
+		<div class="card soft">
+			<h2>Recommended Destinations</h2>
+		</div>
+	</div>
+
 
 	<div class="container">
 		<?php 
 
-		$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='' ORDER BY `date_create` DESC Limit 3");
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `location`='Seattle,WA' ORDER BY `date_create` DESC Limit 3");
 		recommendedProducts($result);
+		?>
+	</div>
 
+	<div class="container">
+		<div class="card soft">
+			<h2>Delivery Available</h2>
+		</div>
+	</div> 
+
+	<div class="container">
+		<?php 
+
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='Delivery' ORDER BY `date_create` DESC Limit 3");
+		recommendedProducts($result);
 		?>
 	</div>
 
